@@ -6,9 +6,7 @@ public class Historico {
     private List<Vacinas> vacina = new ArrayList<>();
     private List<Vermifugo> vermifugo = new ArrayList<>();
 
-    Animal pet;
-
-
+    
     public Historico(Vacinas vac){
 
         this.vacina.add(vac);

@@ -54,10 +54,7 @@ public class GerenciarAnimal {
                 if(opcao == 1){
                     System.out.println("Digite a idade do pet.");
                     String idade = ler.nextLine();  
-                    pet.get(i).setIdade(idade);
-
-                    
-                                       
+                    pet.get(i).setIdade(idade);                                       
                     
                 }
                 else if(opcao == 2){
