@@ -1,6 +1,6 @@
 public class Localizacao {
 
-    GerenciarAnimal gerenciar;
+    GerenciarAnimal gerenciar = new GerenciarAnimal();
 
     public void obterLocalizacao(int codigo){
 

@@ -51,7 +51,10 @@ public class TelaPrincipal {
                 String tipo = ler.nextLine();
                 System.out.print("Peso: "); 
                 double peso = ler.nextDouble();
-                System.out.print("Idade: ");                 
+                System.out.print("Idade: "); 
+                
+                ler = new Scanner(System.in);
+
                 String idade = ler.nextLine();
                 System.out.print("Porte: ");
                 String porte = ler.nextLine(); 
@@ -79,7 +82,10 @@ public class TelaPrincipal {
                 break;
 
             case 4: // excluir cadastro de um pet
-                System.out.print("Nome do pet que quer atualizar os dados: ");
+                System.out.print("Nome do pet que deseja remover cadastro: ");
+
+                ler = new Scanner(System.in);
+                
                 String removerPet = ler.nextLine();
 
                 animal.removerAnimal(removerPet);
@@ -149,7 +155,7 @@ public class TelaPrincipal {
             case 0: // sair 
 
                 login.menuInicial();
-
+                
                 break;
 
         
