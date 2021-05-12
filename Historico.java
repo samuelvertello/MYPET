@@ -6,6 +6,8 @@ public class Historico {
     private List<Vacinas> vacina = new ArrayList<>();
     private List<Vermifugo> vermifugo = new ArrayList<>();
 
+    Animal pet;
+
 
     public Historico(Vacinas vac){
 
@@ -19,11 +21,25 @@ public class Historico {
     }
 
     public void obterConsultas(){
+        for(Vacinas v : vacina){
+            System.out.println(v);
+        }
+
+        for(Vermifugo vg : vermifugo){
+            System.out.println(vg);
+        }
 
 
     }
 
-    public void obterAtendimento(){
+    public void marcarAtendimento(String tipo){
+        
+            
+
+        
+
+        
+
 
 
     }

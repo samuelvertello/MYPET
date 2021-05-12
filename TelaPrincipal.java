@@ -1,13 +1,4 @@
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.Formatter;
 import java.util.Scanner;
-
-import jdk.internal.jshell.tool.Feedback.FormatErrors;
 
 public class TelaPrincipal {
 
@@ -29,6 +20,7 @@ public class TelaPrincipal {
         System.out.println("* 5 - Obter dicas de raça          *");
         System.out.println("* 6 - Buscar localização de um pet *");
         System.out.println("* 7 - Historico do pet             *");
+        System.out.println("* 8 - Marcar consulta              *");
         System.out.println("* 0 - Sair da aplicação            *");
         System.out.println("************************************");
     }
@@ -53,9 +45,8 @@ public class TelaPrincipal {
                 String tipo = ler.nextLine();
                 System.out.print("Peso: "); 
                 double peso = ler.nextDouble();
-                System.out.print("Idade: "); 
-                String formatoIdade = "05/12/2021";
-                Date iadade = 
+                System.out.print("Idade: ");                 
+                String idade = ler.nextLine();
                 System.out.print("Porte: ");
                 String porte = ler.nextLine(); 
                 System.out.print("Raça: "); 
@@ -107,6 +98,12 @@ public class TelaPrincipal {
 
 
                 break;
+
+            case 8: // marcar consulta
+
+                System.out.println("Codigo do pet que deseja marcar a consulta");
+                int codigo = ler.nextInt();
+               
 
             case 0: // sair 
 
