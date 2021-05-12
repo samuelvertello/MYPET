@@ -7,10 +7,10 @@ public class Vacinas {
     private Date proximaVacina;
 
 
-    public Vacinas(String nomeVacina, Date dataVacina, Date proximaVacina) {
+    public Vacinas(String nomeVacina, Date dataVacina) {
         this.nomeVacina = nomeVacina;
         this.dataVacina = dataVacina;
-        this.proximaVacina = proximaVacina;
+        this.proximaVacina = dataVacina;
     }
 
 

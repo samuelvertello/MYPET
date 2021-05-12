@@ -9,6 +9,8 @@ public class TelaPrincipal {
     Dicas dica;
 
     Localizacao buscar;
+    
+    Historico historico;
 
     public void obterMenuPrincipal(){
 
