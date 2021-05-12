@@ -9,7 +9,7 @@ public class GerenciarCadastro {
 
     Scanner ler = new Scanner(System.in);
 
-    TelaPrincipal telaPrincipal;
+    TelaPrincipal telaPrincipal = new TelaPrincipal();
 
     public boolean salvarCadastro(String email, String senha, String nome, String telefone ){
 

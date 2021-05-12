@@ -2,30 +2,30 @@ import java.util.Scanner;
 
 public class Login {
 
-    GerenciarCadastro cadastro;
+    GerenciarCadastro cadastro = new GerenciarCadastro();
 
     Scanner ler = new Scanner(System.in);
 
     public void exibirMenuInicial(){
 
         
-        System.out.println("* MY PET *\n");
-
+        System.out.println("\n\n>>  * MY PET *  <<");
         System.out.println("\n*************************");
         System.out.println("* 1 - Cadastrar         *");
         System.out.println("* 2 - Login             *");
         System.out.println("* 3 - Esqueceu a senha? *");
-        System.out.println("* 0 - Sair              *");
+        System.out.println("* 0 - Fechar            *");
         System.out.println("*************************");
     }
 
     public void menuInicial(){
-
-        exibirMenuInicial();
-
-        int opcao = 9;
+        
+        int opcao = 9;        
 
         while(opcao != 0){
+
+            exibirMenuInicial();
+            
 
         System.out.println("\nQual operação deseja realizar?");
         opcao = ler.nextInt();
@@ -47,16 +47,17 @@ public class Login {
                 System.out.print("Criar senha: "); 
                 String senha = ler.nextLine();
                 
-                cadastro.salvarCadastro(email, senha, nome, telefone);
-                
+                cadastro.salvarCadastro(email, senha, nome, telefone);                
                 
                 break;
 
             case 2: // login
-                System.out.print("Nome: ");
+                ler = new Scanner(System.in);
+
+                System.out.print("Email: ");
                 String loginEmail = ler.nextLine();
 
-                System.out.println("Senha: ");
+                System.out.print("Senha: ");
                 String loginSenha = ler.nextLine();
 
                 cadastro.efetuarLogin(loginEmail, loginSenha);

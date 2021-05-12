@@ -7,6 +7,8 @@ public class Animal {
     private String porte;
     private String raca;
     private String pelagagem;
+
+    private Consulta consulta;
    
     
     public Animal(String nome, String tipo, double peso, String idade, String porte, String raca, String pelagem) {
@@ -31,6 +33,19 @@ public class Animal {
         this.raca = raca;
     }
 
+    
+
+
+
+
+    public Animal(int codigoPet, String nome, String tipo, String idade, String raca, Consulta consulta) {
+        this.codigoPet = codigoPet;
+        this.nome = nome;
+        this.tipo = tipo;
+        this.idade = idade;
+        this.raca = raca;
+        this.consulta = consulta;
+    }
 
 
 
@@ -107,6 +122,20 @@ public class Animal {
     public int getCodigoPet() {
         return codigoPet;
     }
+
+    
+
+
+    public Consulta getConsulta() {
+        return consulta;
+    }
+
+
+
+    public void setConsulta(Consulta consulta) {
+        this.consulta = consulta;
+    }
+
 
 
     @Override

@@ -1,16 +1,16 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class TelaPrincipal {
 
-    GerenciarAnimal animal;
+    GerenciarAnimal animal = new GerenciarAnimal();
 
     Login login;
 
-    Dicas dica;
+    Dicas dica = new Dicas();
 
-    Localizacao buscar;
+    Localizacao buscar = new Localizacao();    
     
-    Historico historico;
 
     public void obterMenuPrincipal(){
 
@@ -23,17 +23,18 @@ public class TelaPrincipal {
         System.out.println("* 6 - Buscar localização de um pet *");
         System.out.println("* 7 - Historico do pet             *");
         System.out.println("* 8 - Marcar consulta              *");
+        System.out.println("* 9 - Consultas realizadas         *");
         System.out.println("* 0 - Sair da aplicação            *");
         System.out.println("************************************");
     }
 
     public void MenuPrincipal(){
 
-    int opcao = 9;
-
-    Scanner ler = new Scanner(System.in);
+    int opcao = 99;
+    
 
     while(opcao != 0){
+        Scanner ler = new Scanner(System.in);
 
         obterMenuPrincipal();
         System.out.println("\nQual operação deseja realizar?");
@@ -41,6 +42,9 @@ public class TelaPrincipal {
 
         switch (opcao) {
             case 1: // Cadastrar pet 
+
+                ler = new Scanner(System.in);
+
                 System.out.print("Nome do pet: "); 
                 String nome = ler.nextLine();
                 System.out.print("Tipo do pet: "); 
@@ -103,8 +107,43 @@ public class TelaPrincipal {
 
             case 8: // marcar consulta
 
-                System.out.println("Codigo do pet que deseja marcar a consulta");
+                ler = new Scanner(System.in);
+
+                System.out.print("Codigo do pet que deseja marcar a consulta: ");
                 int codigo = ler.nextInt();
+
+                String tipoConsulta = null;
+
+                System.out.print("Tipo de consulta: 1 - periodica 2 - vermifugação 3 - outros ");
+                int opcaoo = ler.nextInt();
+                
+                if(opcaoo == 1){
+                    tipoConsulta = "periodica";
+                }
+                if(opcaoo == 2){
+                    tipoConsulta = "vermifugacao";
+                }
+                if(opcaoo == 3){
+                    tipoConsulta = "outros";
+                }
+
+                LocalDate dataConsulta = LocalDate.of(2021, 8, 15);
+                String nomeClinica = "cliniVet - clinica veterinaria";
+
+                Consulta consulta = new Consulta(tipoConsulta, dataConsulta, nomeClinica);
+
+                animal.marcarConsulta(codigo, consulta);
+
+                break;
+
+            case 9: //exibir historico consultas
+
+                System.out.print("Codigo pet: ");
+                int codigoo = ler.nextInt();
+
+                animal.obterHistoricoConsultas(codigoo);
+
+                break;
                
 
             case 0: // sair 

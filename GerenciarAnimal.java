@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class GerenciarAnimal {
 
     private List<Animal> pet = new ArrayList<>();
+    
 
     Scanner ler = new Scanner(System.in);
 
@@ -98,6 +99,33 @@ public class GerenciarAnimal {
         return false;
     }
 
+    public boolean marcarConsulta(int codigo, Consulta consulta){
+        for(int i = 0; i < pet.size(); i++){
+            if(pet.get(i).getCodigoPet() == codigo){
+                int codigoPet = pet.get(i).getCodigoPet();
+                String nome = pet.get(i).getNome();
+                String tipo = pet.get(i).getTipo();
+                String idade = pet.get(i).getIdade();
+                String raca = pet.get(i).getRaca();
+                
+                Animal animal = new Animal(codigoPet, nome, tipo, idade, raca, consulta);
+                pet.set(i, animal);
+                return true;                
+                
+
+            }
+        }
+        return false;
+    }
+
+    public void obterHistoricoConsultas(int codigo){
+        for(Animal a : pet){
+            if(a.getCodigoPet() == codigo){
+                a.getConsulta();
+            }
+        }
+
+    }
 
     
 
