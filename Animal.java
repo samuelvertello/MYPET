@@ -1,17 +1,15 @@
-import java.util.Date;
-
 public class Animal {
     private int codigoPet = 0;
     private String nome;
     private String tipo;
     private double peso;
-    private Date idade;
+    private String idade;
     private String porte;
     private String raca;
     private String pelagagem;
    
     
-    public Animal(String nome, String tipo, double peso, Date idade, String porte, String raca, String pelagem) {
+    public Animal(String nome, String tipo, double peso, String idade, String porte, String raca, String pelagem) {
         this.codigoPet++;
         this.nome = nome;
         this.tipo = tipo;
@@ -23,11 +21,10 @@ public class Animal {
         
 
     }
-
     
 
 
-    public Animal(String nome, double peso, Date idade, String raca) {
+    public Animal(String nome, double peso, String idade, String raca) {
         this.nome = nome;
         this.peso = peso;
         this.idade = idade;
@@ -67,12 +64,12 @@ public class Animal {
     }
 
 
-    public Date getIdade() {
+    public String getIdade() {
         return idade;
     }
 
 
-    public void setIdade(Date idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

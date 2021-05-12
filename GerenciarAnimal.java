@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,7 +9,7 @@ public class GerenciarAnimal {
 
     Scanner ler = new Scanner(System.in);
 
-    public void adicionarAnimal(String nome, String tipo, double peso, Date idade, String porte, String raca, String pelagem){
+    public void adicionarAnimal(String nome, String tipo, double peso, String idade, String porte, String raca, String pelagem){
 
         Animal animal = new Animal(nome, tipo, peso, idade, porte, raca, pelagem);
         pet.add(animal);
@@ -39,7 +38,7 @@ public class GerenciarAnimal {
 
                 String atualizarNome;
                 double atualizarPeso;
-                java.util.Date data = pet.get(i).getIdade();
+                String data = pet.get(i).getIdade();
                 String atualizarRaca = pet.get(i).getRaca();
 
                 System.out.println(pet.get(i).toString()+"\n");
@@ -54,8 +53,10 @@ public class GerenciarAnimal {
                 int opcao = ler.nextInt();
                 if(opcao == 1){
                     System.out.println("Digite a idade do pet.");
-                    long date = ler.nextLong();                   
-                    data = new Date(date);
+                    String idade = ler.nextLine();  
+                    pet.get(i).setIdade(idade);
+
+                    
                                        
                     
                 }
