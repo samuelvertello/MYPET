@@ -24,7 +24,7 @@ public class TelaPrincipal {
         System.out.println("* 7 - Buscar localização de um pet *");
         System.out.println("* 8 - Historico do pet             *");
         System.out.println("* 9 - Registrar consulta           *");
-        System.out.println("* 10 - Consultas realizadas        *");
+        System.out.println("* 10 - Historico Consultas         *");
         System.out.println("* 0 - Sair da aplicação            *");
         System.out.println("************************************");
     }
@@ -151,7 +151,7 @@ public class TelaPrincipal {
 
                 Consulta consulta = new Consulta(tipoConsulta, dataConsulta, nomeClinica);
 
-                animal.marcarConsulta(codig, consulta);
+                animal.cadastrarConsulta(codig, consulta);
 
                 break;
 

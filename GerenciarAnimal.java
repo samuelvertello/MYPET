@@ -30,17 +30,30 @@ public class GerenciarAnimal {
         
         }
 
-    public void obterDadosPet(int codigo){
+    public boolean obterDadosPet(int codigo){
+
+        if(pet.size() == 0){
+            System.out.println("Nenhum pet cadastrado");
+            return false;
+
+        }
 
         for(Animal a : pet){
             if(a.getCodigoPet() == codigo){
                 a.toString();
             }
         }
+        return true;
     }
 
 
-    public void atualizarAnimal(String nome){
+    public boolean atualizarAnimal(String nome){
+        
+        if(pet.size() == 0){
+            System.out.println("Nenhum pet cadastrado");
+            return false;
+
+        }
 
 
         for(int i = 0; i < pet.size(); i++){
@@ -89,9 +102,16 @@ public class GerenciarAnimal {
 
             }
         }
+        return true;
     }
 
     public boolean removerAnimal(String nome){
+        
+        if(pet.size() == 0){
+            System.out.println("Nenhum pet cadastrado");
+            return false;
+
+        }
 
         for(Animal a : pet){
             if(a.getNome().equals(nome)){
@@ -108,7 +128,13 @@ public class GerenciarAnimal {
         return false;
     }
 
-    public boolean marcarConsulta(int codigo, Consulta consulta){
+    public boolean cadastrarConsulta(int codigo, Consulta consulta){
+        
+        if(pet.size() == 0){
+            System.out.println("Nenhum pet cadastrado");
+            return false;
+
+        }
         for(int i = 0; i < pet.size(); i++){
             if(pet.get(i).getCodigoPet() == codigo){
                 int codigoPet = pet.get(i).getCodigoPet();

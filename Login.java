@@ -9,7 +9,7 @@ public class Login {
     public void exibirMenuInicial(){
 
         
-        System.out.println("\n\n>>  * MY PET *  <<");
+        System.out.println("\n\n    >>  * MY PET *  <<");
         System.out.println("\n*************************");
         System.out.println("* 1 - Cadastrar         *");
         System.out.println("* 2 - Login             *");
