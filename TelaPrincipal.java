@@ -22,7 +22,7 @@ public class TelaPrincipal {
         System.out.println("* 5 - Obter dicas de raça          *");
         System.out.println("* 6 - Buscar localização de um pet *");
         System.out.println("* 7 - Historico do pet             *");
-        System.out.println("* 8 - Marcar consulta              *");
+        System.out.println("* 8 - Registrar consulta           *");
         System.out.println("* 9 - Consultas realizadas         *");
         System.out.println("* 0 - Sair da aplicação            *");
         System.out.println("************************************");
@@ -115,7 +115,7 @@ public class TelaPrincipal {
 
                 ler = new Scanner(System.in);
 
-                System.out.print("Codigo do pet que deseja marcar a consulta: ");
+                System.out.print("Codigo do pet que deseja registrar consulta: ");
                 int codigo = ler.nextInt();
 
                 String tipoConsulta = null;
@@ -132,9 +132,12 @@ public class TelaPrincipal {
                 if(opcaoo == 3){
                     tipoConsulta = "outros";
                 }
+                System.out.print("Data consulta: ");
+                String data = ler.nextLine();
+                LocalDate dataConsulta = LocalDate.parse(data);
 
-                LocalDate dataConsulta = LocalDate.of(2021, 8, 15);
-                String nomeClinica = "cliniVet - clinica veterinaria";
+                System.out.println("Nome clinica: ");
+                String nomeClinica = ler.nextLine().toLowerCase();
 
                 Consulta consulta = new Consulta(tipoConsulta, dataConsulta, nomeClinica);
 
