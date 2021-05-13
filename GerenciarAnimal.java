@@ -30,6 +30,15 @@ public class GerenciarAnimal {
         
         }
 
+    public void obterDadosPet(int codigo){
+
+        for(Animal a : pet){
+            if(a.getCodigoPet() == codigo){
+                a.toString();
+            }
+        }
+    }
+
 
     public void atualizarAnimal(String nome){
 

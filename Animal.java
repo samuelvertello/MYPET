@@ -140,8 +140,9 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal [codigoPet=" + codigoPet + ", idade=" + idade + ", nome=" + nome + ", pelagagem=" + pelagagem
-                + ", peso=" + peso + ", porte=" + porte + ", raca=" + raca + ", tipo=" + tipo + "]";
+        return "Animal [codigoPet=" + codigoPet + ", consulta=" + consulta + ", idade=" + idade + ", nome=" + nome
+                + ", pelagagem=" + pelagagem + ", peso=" + peso + ", porte=" + porte + ", raca=" + raca + ", tipo="
+                + tipo + "]";
     }
 
     

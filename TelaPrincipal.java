@@ -17,13 +17,14 @@ public class TelaPrincipal {
         System.out.println("\n************************************");
         System.out.println("* 1 - Cadastrar pet                *");
         System.out.println("* 2 - Obter lista de pet           *");
-        System.out.println("* 3 - Atualizar dados de um pet    *");
-        System.out.println("* 4 - Excluir cadastro de um pet   *");
-        System.out.println("* 5 - Obter dicas de raça          *");
-        System.out.println("* 6 - Buscar localização de um pet *");
-        System.out.println("* 7 - Historico do pet             *");
-        System.out.println("* 8 - Registrar consulta           *");
-        System.out.println("* 9 - Consultas realizadas         *");
+        System.out.println("* 3 - Dados do pet                 *");
+        System.out.println("* 4 - Atualizar dados de um pet    *");
+        System.out.println("* 5 - Excluir cadastro de um pet   *");
+        System.out.println("* 6 - Obter dicas de raça          *");
+        System.out.println("* 7 - Buscar localização de um pet *");
+        System.out.println("* 8 - Historico do pet             *");
+        System.out.println("* 9 - Registrar consulta           *");
+        System.out.println("* 10 - Consultas realizadas        *");
         System.out.println("* 0 - Sair da aplicação            *");
         System.out.println("************************************");
     }
@@ -73,7 +74,16 @@ public class TelaPrincipal {
 
                 break;
 
-            case 3: // atualizar dados de um pet
+            case 3: // Dados do pet
+                System.out.print("Codigo do pet: ");
+                int codigo = ler.nextInt();
+
+                animal.obterDadosPet(codigo);
+
+                break;
+
+
+            case 4: // atualizar dados de um pet
                 System.out.print("Nome do pet que quer atualizar os dados: ");
                 String nomePet = ler.nextLine();
 
@@ -81,7 +91,7 @@ public class TelaPrincipal {
 
                 break;
 
-            case 4: // excluir cadastro de um pet
+            case 5: // excluir cadastro de um pet
                 System.out.print("Nome do pet que deseja remover cadastro: ");
 
                 ler = new Scanner(System.in);
@@ -92,31 +102,31 @@ public class TelaPrincipal {
 
                 break;
 
-            case 5: // obter dicas de pet
+            case 6: // obter dicas de pet
                 System.out.print("Gostaria de dicas para qual raça: ");
                 String dicaRaca = ler.nextLine();
 
                 dica.obterDicas(dicaRaca);
                 break;
 
-            case 6: // buscar localização de pet
+            case 7: // buscar localização de pet
                 System.out.print("Gostaria de localizar qual pet: ");
                 int localizacao = ler.nextInt();
 
                 buscar.obterLocalizacao(localizacao);
                 break;
 
-            case 7: // historico do pet
+            case 8: // historico do pet
 
 
                 break;
 
-            case 8: // marcar consulta
+            case 9: // marcar consulta
 
                 ler = new Scanner(System.in);
 
                 System.out.print("Codigo do pet que deseja registrar consulta: ");
-                int codigo = ler.nextInt();
+                int codig = ler.nextInt();
 
                 String tipoConsulta = null;
 
@@ -141,11 +151,11 @@ public class TelaPrincipal {
 
                 Consulta consulta = new Consulta(tipoConsulta, dataConsulta, nomeClinica);
 
-                animal.marcarConsulta(codigo, consulta);
+                animal.marcarConsulta(codig, consulta);
 
                 break;
 
-            case 9: //exibir historico consultas
+            case 10: //exibir historico consultas
 
                 System.out.print("Codigo pet: ");
                 int codigoo = ler.nextInt();
