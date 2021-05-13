@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class TelaPrincipal {
 
+    Scanner ler = new Scanner(System.in);
+
     GerenciarAnimal animal = new GerenciarAnimal();
 
     Login login;
@@ -35,11 +37,12 @@ public class TelaPrincipal {
     
 
     while(opcao != 0){
-        Scanner ler = new Scanner(System.in);
-
+        
         obterMenuPrincipal();
         System.out.println("\nQual operação deseja realizar?");
         opcao = ler.nextInt();
+
+        ler = new Scanner(System.in);
 
         switch (opcao) {
             case 1: // Cadastrar pet 
@@ -181,5 +184,6 @@ public class TelaPrincipal {
     }
 
 }
+
     
 }
