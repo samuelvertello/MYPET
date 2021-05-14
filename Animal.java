@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Animal {
     private int codigoPet = 0;
     private String nome;
@@ -8,11 +10,15 @@ public class Animal {
     private String raca;
     private String pelagem;
 
+    Random gerador = new Random();
+
     private Consulta consulta;
+    
    
     
     public Animal(String nome, String tipo, double peso, String idade, String porte, String raca, String pelagem) {
-        this.codigoPet++;
+        this.codigoPet = gerador.hashCode();
+        
         this.nome = nome;
         this.tipo = tipo;
         this.peso = peso;

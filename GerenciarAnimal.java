@@ -40,7 +40,7 @@ public class GerenciarAnimal {
 
         for(Animal a : pet){
             if(a.getCodigoPet() == codigo){
-                a.toString();
+                System.out.println(a.toString());
             }
         }
         return true;

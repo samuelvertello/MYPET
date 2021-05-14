@@ -141,12 +141,13 @@ public class TelaPrincipal {
                     tipoConsulta = "outros";
                 }
 
-                ler = new Scanner(System.in);
-
+                
                 System.out.println("Tomou vacina? 1 - sim   2 - não");
                 int opcaoVacina = ler.nextInt();
 
                 String vacina = null;
+
+                ler = new Scanner(System.in);
 
                 if(opcaoVacina == 1){
 
