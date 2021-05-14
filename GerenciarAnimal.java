@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class GerenciarAnimal {
 
-    private List<Animal> pet = new ArrayList<>();
+    static List<Animal> pet = new ArrayList<>();
     
 
     Scanner ler = new Scanner(System.in);
@@ -167,12 +167,7 @@ public class GerenciarAnimal {
     public List<Animal> getPet() {
         return pet;
     }
-
-
-    public void setPet(List<Animal> pet) {
-        this.pet = pet;
-    }
-    
+   
 
     
 }

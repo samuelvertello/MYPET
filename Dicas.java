@@ -4,7 +4,12 @@ public class Dicas {
 
     public void obterDicas(String raca){
 
-            System.out.println("https://www.google.com.br/search?q="+raca);            
+        for(int i = 0; i < GerenciarAnimal.pet.size(); i++){
+            if(GerenciarAnimal.pet.get(i).getRaca().equals(raca)){
+                //amostra superficial de como funcionaria a busca
+                System.out.println("https://www.google.com.br/search?q=dicas%20"+GerenciarAnimal.pet.get(i).getRaca());
+            }
+        }          
         
 
 
