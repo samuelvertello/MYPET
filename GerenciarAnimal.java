@@ -24,7 +24,7 @@ public class GerenciarAnimal {
 
         for(Animal a : pet){
 
-            System.out.print("Tipo: "+a.getTipo()+" Nome: "+a.getNome());
+            System.out.print("Codigo: "+a.getCodigoPet()+"  Tipo: "+a.getTipo()+"   Nome: "+a.getNome());
             
         }
         
@@ -156,7 +156,7 @@ public class GerenciarAnimal {
     public void obterHistoricoConsultas(int codigo){
         for(Animal a : pet){
             if(a.getCodigoPet() == codigo){
-                a.getConsulta();
+                System.out.println(a.getConsulta().toString());
             }
         }
 

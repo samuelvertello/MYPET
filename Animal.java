@@ -6,7 +6,7 @@ public class Animal {
     private String idade;
     private String porte;
     private String raca;
-    private String pelagagem;
+    private String pelagem;
 
     private Consulta consulta;
    
@@ -19,7 +19,7 @@ public class Animal {
         this.idade = idade;
         this.porte = porte;
         this.raca = raca;
-        this.pelagagem = pelagem;
+        this.pelagem = pelagem;
         
 
     }
@@ -109,13 +109,13 @@ public class Animal {
     }
 
 
-    public String getPelagagem() {
-        return pelagagem;
+    public String getPelagem() {
+        return pelagem;
     }
 
 
-    public void setPelagagem(String pelagagem) {
-        this.pelagagem = pelagagem;
+    public void setPelagagem(String pelagem) {
+        this.pelagem = pelagem;
     }
 
 
@@ -141,7 +141,7 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal [codigoPet=" + codigoPet + ", consulta=" + consulta + ", idade=" + idade + ", nome=" + nome
-                + ", pelagagem=" + pelagagem + ", peso=" + peso + ", porte=" + porte + ", raca=" + raca + ", tipo="
+                + ", pelagem=" + pelagem + ", peso=" + peso + ", porte=" + porte + ", raca=" + raca + ", tipo="
                 + tipo + "]";
     }
 

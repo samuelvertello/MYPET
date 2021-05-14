@@ -1,4 +1,4 @@
-import java.time.LocalDate;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class TelaPrincipal {
@@ -23,15 +23,14 @@ public class TelaPrincipal {
         System.out.println("* 4 - Atualizar dados de um pet    *");
         System.out.println("* 5 - Excluir cadastro de um pet   *");
         System.out.println("* 6 - Obter dicas de raça          *");
-        System.out.println("* 7 - Buscar localização de um pet *");
-        System.out.println("* 8 - Historico do pet             *");
-        System.out.println("* 9 - Registrar consulta           *");
-        System.out.println("* 10 - Historico Consultas         *");
+        System.out.println("* 7 - Buscar localização de um pet *");        
+        System.out.println("* 8 - Registrar consulta           *");
+        System.out.println("* 9 - Historico de consultas       *");        
         System.out.println("* 0 - Sair da aplicação            *");
         System.out.println("************************************");
     }
 
-    public void MenuPrincipal(){
+    public void MenuPrincipal() throws ParseException{
 
     int opcao = 99;
     
@@ -118,13 +117,9 @@ public class TelaPrincipal {
 
                 buscar.obterLocalizacao(localizacao);
                 break;
+           
 
-            case 8: // historico do pet
-
-
-                break;
-
-            case 9: // marcar consulta
+            case 8: // registrar consulta
 
                 ler = new Scanner(System.in);
 
@@ -145,28 +140,49 @@ public class TelaPrincipal {
                 if(opcaoo == 3){
                     tipoConsulta = "outros";
                 }
-                System.out.print("Data consulta: ");
-                String data = ler.nextLine();
-                LocalDate dataConsulta = LocalDate.parse(data);
 
+                ler = new Scanner(System.in);
+
+                System.out.println("Tomou vacina? 1 - sim   2 - não");
+                int opcaoVacina = ler.nextInt();
+
+                String vacina = null;
+
+                if(opcaoVacina == 1){
+
+                    System.out.print("Nome vacina: ");
+                    vacina = ler.nextLine();
+                }
+                if(opcaoVacina == 2){   
+
+                   vacina = null;
+
+                }
+
+
+                ler = new Scanner(System.in);
+
+                System.out.print("Data consulta: ");                
+                String data = ler.nextLine();                
+                
                 System.out.println("Nome clinica: ");
                 String nomeClinica = ler.nextLine().toLowerCase();
 
-                Consulta consulta = new Consulta(tipoConsulta, dataConsulta, nomeClinica);
+                Consulta consulta = new Consulta(tipoConsulta, vacina, data, nomeClinica);
 
                 animal.cadastrarConsulta(codig, consulta);
 
                 break;
 
-            case 10: //exibir historico consultas
-
+            case 9: // historico do pet
                 System.out.print("Codigo pet: ");
                 int codigoo = ler.nextInt();
 
                 animal.obterHistoricoConsultas(codigoo);
 
-                break;
-               
+            break;
+
+            
 
             case 0: // sair 
 

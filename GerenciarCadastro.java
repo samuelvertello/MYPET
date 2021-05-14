@@ -1,3 +1,4 @@
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -52,7 +53,12 @@ public class GerenciarCadastro {
             if(c.getEmail().equals(email) && c.getSenha().equals(senha)){
 
                                
-                telaPrincipal.MenuPrincipal();
+                try {
+                    telaPrincipal.MenuPrincipal();
+                } catch (ParseException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
 
                 return true;                
             }
