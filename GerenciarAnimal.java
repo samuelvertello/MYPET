@@ -24,7 +24,7 @@ public class GerenciarAnimal {
 
         for(Animal a : pet){
 
-            System.out.print("Codigo: "+a.getCodigoPet()+"  Tipo: "+a.getTipo()+"   Nome: "+a.getNome());
+            System.out.print("\nCodigo: "+a.getCodigoPet()+"  Tipo: "+a.getTipo()+"   Nome: "+a.getNome());
             
         }
         
