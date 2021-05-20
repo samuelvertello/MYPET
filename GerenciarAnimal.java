@@ -59,10 +59,15 @@ public class GerenciarAnimal {
         for(int i = 0; i < pet.size(); i++){
             if(pet.get(i).getNome().equals(nome)){
 
+                int codigo = pet.get(i).getCodigoPet();
                 String atualizarNome;
+                String tipo = pet.get(i).getTipo();
                 double atualizarPeso;
                 String data = pet.get(i).getIdade();
+                String porte = pet.get(i).getPorte();
                 String atualizarRaca = pet.get(i).getRaca();
+                String pelagem = pet.get(i).getPelagem();
+                
 
                 System.out.println(pet.get(i).toString()+"\n");
                 
@@ -96,7 +101,7 @@ public class GerenciarAnimal {
                     atualizarRaca = pet.get(i).getRaca();
                 }
 
-                var animal = new Animal(atualizarNome, atualizarPeso , data, atualizarRaca);
+                var animal = new Animal(codigo, atualizarNome, tipo, atualizarPeso, data, porte, atualizarRaca, pelagem);
                 pet.set(i, animal);             
                 
 
@@ -140,10 +145,14 @@ public class GerenciarAnimal {
                 int codigoPet = pet.get(i).getCodigoPet();
                 String nome = pet.get(i).getNome();
                 String tipo = pet.get(i).getTipo();
-                String idade = pet.get(i).getIdade();
+                double peso = pet.get(i).getPeso();
+                String idade = pet.get(i).getIdade();               
+                String porte = pet.get(i).getPorte();
                 String raca = pet.get(i).getRaca();
+                String pelagem = pet.get(i).getPelagem();
+
                 
-                Animal animal = new Animal(codigoPet, nome, tipo, idade, raca, consulta);
+                Animal animal = new Animal(codigoPet, nome, tipo, peso, idade, porte, raca, pelagem, consulta);
                 pet.set(i, animal);
                 return true;                
                 

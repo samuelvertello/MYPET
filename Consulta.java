@@ -5,9 +5,7 @@ public class Consulta {
     private String dataConsulta;
     private String nomeClinica;
     private String vacina;
-    private String vermifugo;
     
-
 
     public Consulta(String tipoConsulta,  String vacina, String dataConsulta, String nomeClinica) {
         this.tipoConsulta = tipoConsulta;
@@ -21,11 +19,10 @@ public class Consulta {
 
 
     @Override
-    public String toString() {
-        return "Consulta [codigoConsulta=" + codigoConsulta + ", dataConsulta=" + dataConsulta + ", nomeClinica="
-                + nomeClinica + ", tipoConsulta=" + tipoConsulta + ", vacina=" + vacina + ", vermifugo=" + vermifugo
-                + "]";
-    }
+	public String toString() {
+		return "Consulta [codigoConsulta: " + codigoConsulta + ", dataConsulta: " + dataConsulta + ", nomeClinica: "
+				+ nomeClinica + ", tipoConsulta: " + tipoConsulta +"vacina: "+vacina + "]";
+	}
 
           
  

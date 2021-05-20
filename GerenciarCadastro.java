@@ -56,7 +56,7 @@ public class GerenciarCadastro {
                 try {
                     telaPrincipal.MenuPrincipal();
                 } catch (ParseException e) {
-                    // TODO Auto-generated catch block
+                    
                     e.printStackTrace();
                 }
 

@@ -42,7 +42,7 @@ public class Login {
                 String email = ler.nextLine();
 
                 System.out.print("Numero telefone: "); 
-                String telefone = ler.nextLine();
+                String telefone = ler.nextLine();                
                
                 System.out.print("Criar senha: "); 
                 String senha = ler.nextLine();

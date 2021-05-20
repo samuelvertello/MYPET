@@ -17,8 +17,8 @@ public class Animal {
    
     
     public Animal(String nome, String tipo, double peso, String idade, String porte, String raca, String pelagem) {
-        this.codigoPet = gerador.hashCode();
-        
+
+        this.codigoPet = gerador.hashCode();        
         this.nome = nome;
         this.tipo = tipo;
         this.peso = peso;
@@ -29,22 +29,23 @@ public class Animal {
         
 
     }
-    
 
-
-    public Animal(String nome, double peso, String idade, String raca) {
+    public Animal(int codigoPet, String nome, String tipo, double peso, String idade, String porte, String raca,
+    String pelagem) {
+        
+        this.codigoPet = codigoPet;
         this.nome = nome;
+        this.tipo = tipo;
         this.peso = peso;
         this.idade = idade;
+        this.porte = porte;
         this.raca = raca;
-    }
+        this.pelagem = pelagem;
+}
+        
+    public Animal(int codigoPet, String nome, String tipo,double peso, String idade,String porte, String raca,
+    String pelagem, Consulta consulta) {
 
-    
-
-
-
-
-    public Animal(int codigoPet, String nome, String tipo, String idade, String raca, Consulta consulta) {
         this.codigoPet = codigoPet;
         this.nome = nome;
         this.tipo = tipo;
@@ -54,6 +55,8 @@ public class Animal {
     }
 
 
+
+   
 
     public String getNome() {
         return nome;
@@ -146,9 +149,9 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal [codigoPet=" + codigoPet + ", consulta=" + consulta + ", idade=" + idade + ", nome=" + nome
-                + ", pelagem=" + pelagem + ", peso=" + peso + ", porte=" + porte + ", raca=" + raca + ", tipo="
-                + tipo + "]";
+        return "codigoPet: " + codigoPet + ", consulta: " + consulta + ", idade: " + idade + ", nome: " + nome
+                + ", pelagem: " + pelagem + ", peso: " + peso + ", porte: " + porte + ", raca: " + raca + ", tipo: "
+                + tipo ;
     }
 
     
